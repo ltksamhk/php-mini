@@ -22,7 +22,7 @@ define('SEC_W', 60*60*24*7);
 define('SEC_M', 60*60*24*30);
 define('SEC_Y', 60*60*24*365);
 /****************************************/
-// auto expire
+// auto expire if file not modified for ??? days
 function check_expiry($days) {
 	if ( (time() - filemtime(__FILE__)) > ($days * 24 * 60 * 60) )
 		die('Script expired.');
